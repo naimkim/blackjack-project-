@@ -66,11 +66,20 @@ void printCard(int cardnum) {
 //mix the card sets and put in the array
 int mixCardTray(void) {
 
+	int i;
+	
+	srand((unsigned)time(NULL));
+	for ( i=0; i<52; i++ )
+	printf("%d",1+rand()%max); 
+	
+	mixCardTray=CardTray;
 }
 
 //get one card from the tray
 int pullCard(void) {
+	
 }
+
 
 
 //playing game functions -----------------------------
@@ -93,8 +102,11 @@ void offerCards(void) {
 	//1. give two card for each players
 	for (i=0;i<n_user;i++)
 	{
+		
 		cardhold[i][0] = pullCard();
 		cardhold[i][1] = pullCard();
+		
+		printf("dealer:?\n player[i]:%d\n",pullCard);
 	}
 	//2. give two card for the operator
 	cardhold[n_user][0] = pullCard();
@@ -142,29 +154,48 @@ int checkWinner() {
 
 int main(int argc, char *argv[]) {
 	int roundIndex = 0;
-	int max_user;
+	int max_user=5;
 	int i;
 	
 	srand((unsigned)time(NULL));
 	
 	//set the number of players
 	configUser();
-	printf("HOW MANY PLAYERS WILL PLAY THIS GAME?");
+	printf("HOW MANY PLAYERS WILL PLAY THIS GAME?(max is 5) : ");
 	scanf("%d",&n_user);
+	
+	if (n_user>max_user)
+	printf("TOO MANY PLAYERS!");
+	else
+	printf("-->card is mixed and put into the tray");
 
 	//Game initialization --------
 	//1. players' dollar
-	N_DOLLAR();
+	N_DOLLAR(
+	
+	);
 	//2. card tray
-	mixCardTray();
+	mixCardTray(
+	
+	);
 
 
 
 	//Game start --------
 	do {
 		
-		betDollar();
-		offerCards(); //1. give cards to all the players
+		betDollar(
+		int player [n_user];
+		printf("\n------BETTING STEP--------");
+		
+		printf("\n-->input your betting dollar(total:$50) : ");
+		scanf("%d",&dollar);
+		for(player=1;player<n_user;player++);
+		printf("\n-->player[] bets $%d",);
+		);
+		offerCards(
+		
+		); //1. give cards to all the players
 		
 		printCardInitialStatus();
 		printf("\n------------------ GAME start --------------------------\n");
@@ -172,7 +203,7 @@ int main(int argc, char *argv[]) {
 		//each player's turn
 		for (;;) //each player
 		{
-			printf("round %d",cnt);
+			printf("roundIndex is %d",roundIndex);
 			while () //do until the player dies or player says stop
 			{
 				//print current card status printUserCardStatus();
@@ -180,7 +211,7 @@ int main(int argc, char *argv[]) {
 				//GO? STOP? ::: getAction()
 				//check if the turn ends or not
 			}
-			cnt++;
+			roundIndex++;
 			
 			
 		}
