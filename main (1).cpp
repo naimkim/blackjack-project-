@@ -53,26 +53,30 @@ int getIntegerInput(void) {
 
 //calculate the actual card number in the blackjack game
 int getCardNum(int cardnum) {
+	
 }
 
 //print the card information (e.g. DiaA)
 void printCard(int cardnum) {
 	
-}
+	int N_CARD[4][13]=
+	{{HART,DIA,SPADE,CLUB},
+	{A,2,3,4,5,6,7,8,9,10,J,Q,K}
+	A=1||11;
+	J,Q,K=10;
+	};
+	
+	
+};
 
 
 //card array controllers -------------------------------
 
 //mix the card sets and put in the array
 int mixCardTray(void) {
-
-	int i;
 	
-	srand((unsigned)time(NULL));
-	for ( i=0; i<52; i++ )
-	printf("%d",1+rand()%max); 
 	
-	mixCardTray=CardTray;
+	mixCardTray=
 }
 
 //get one card from the tray
@@ -131,7 +135,7 @@ void printUserCardStatus(int user, int cardcnt) {
 	printf("   -> card : ");
 	for (i=0;i<cardcnt;i++)
 		printCard(cardhold[user][i]);
-	printf("\t ::: ");
+	printf("\n ::: ");
 }
 
 
@@ -160,15 +164,16 @@ int main(int argc, char *argv[]) {
 	srand((unsigned)time(NULL));
 	
 	//set the number of players
-	configUser();
+	configUser(
 	printf("HOW MANY PLAYERS WILL PLAY THIS GAME?(max is 5) : ");
 	scanf("%d",&n_user);
+	
 	
 	if (n_user>max_user)
 	printf("TOO MANY PLAYERS!");
 	else
 	printf("-->card is mixed and put into the tray");
-
+	);
 	//Game initialization --------
 	//1. players' dollar
 	N_DOLLAR(
@@ -207,8 +212,12 @@ int main(int argc, char *argv[]) {
 			while () //do until the player dies or player says stop
 			{
 				//print current card status printUserCardStatus();
+				printf("card : %s%d",)
 				//check the card status ::: calcStepResult()
+				
 				//GO? STOP? ::: getAction()
+				printf(":::ACTION? (0 - GO, others - STOP)");
+				others=getIntegerInput;
 				//check if the turn ends or not
 			}
 			roundIndex++;
@@ -219,6 +228,8 @@ int main(int argc, char *argv[]) {
 		//result
 		checkResult(
 		if
+		
+		
 		);
 	} while (gameEnd == 0);
 	
