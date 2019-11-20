@@ -2,39 +2,37 @@
 #include <stdlib.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
-//카드를 섞어서 트레이에 넣음 
+//카드를 섞어서 트레이에 넣음 그럼 트레이는 메모리공간인가? 
 int main(int argc, char *argv[]) {
-	int N_CARDSET;
+	int N_CARDSET={NULL};
+	int N_CARD[52]=
+	{1,2,3,4,5,6,7,8,9,10,10,10,10,
+	1,2,3,4,5,6,7,8,9,10,10,10,10,
+	1,2,3,4,5,6,7,8,9,10,10,10,10,
+	1,2,3,4,5,6,7,8,9,10,10,10,10};//hart, dia, spade, club
+	
 	int CardTray;
-	char HART;
-	char DIA;
-	char SPADE;
-	char CLUB;
-	int A,J,Q,K;
-	int aChoice;
-	int N_CARD[4][13]=
-	{{HART,DIA,SPADE,CLUB},
-	{A,2,3,4,5,6,7,8,9,10,J,Q,K}};
+	int i,j,k;
 	
-	printf("which number do you choice? \n 1-->1 11-->OTHERS\N");
-	scanf("%d",aChoice);
+	srand(time(NULL));
 	
-	{
-	if (aChoice=0)
-	A=1;
-	else 
-	A=11;
+	//카드 섞으려면 
+	for(i=0;i<52;i++){
+		N_CARD[i]=(rand()%52)+1;
+		
+		for(j=0;j<i;j++)
+		{
+			if(N_CARD[i] == N_CARD[j])
+			{ i--;
+			 break;
+			 }
+		}
+	}
+
 	
-	return A;
-}
 	
-	J,Q,K=10;
-	
-	mixCardTray(
-	N_CARD[4][13]=rand()%52+1;//배열 하나하나당 섞어야한다고....나 안해  
 	N_CARDSET=N_CARD;
-	);
-	
-	
+	CardTray=N_CARDSET;
+ 
 	return 0;
 }
