@@ -11,7 +11,7 @@ int pullCard(int argc, char *argv[]) {
 	srand((unsigned)time(NULL));
 	x=rand()%N_CARD;
 	
-	printf("%d\n",x);
+
 	
-	return 0;
+	return x;
 }
