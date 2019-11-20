@@ -181,13 +181,19 @@ int main(int argc, char *argv[]) {
 	printf("HOW MANY PLAYERS WILL PLAY THIS GAME?(max is 5) : ");
 	scanf("%d",&n_user);
 		
-	if (n_user<=0||n_user>max_user)
-	printf("no\n");
-	
-	else
-	break;
+	if (n_user<0){
+		printf("no\n");
+		continue;
 	}
-	printf("-->card is mixed and put into the tray");
+	else if(n_user>5){
+		printf("too many!\n");
+		continue;
+	}
+	else{
+		printf("-->card is mixed and put into the tray");
+		break;
+	}
+	
 	);
 	//Game initialization --------
 	//1. players' dollar
