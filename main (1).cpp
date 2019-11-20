@@ -69,14 +69,7 @@ int getCardNum(int cardnum) {
 
 //print the card information (e.g. DiaA)
 void printCard(int cardnum) {
-	
-	int N_CARD[4][13]=
-	{{HART,DIA,SPADE,CLUB},
-	{A,2,3,4,5,6,7,8,9,10,J,Q,K}
-	A=1||11;
-	J,Q,K=10;
-	};
-	
+
 	
 };
 
@@ -86,8 +79,6 @@ void printCard(int cardnum) {
 //mix the card sets and put in the array
 int mixCardTray(void) {
 	
-	
-	mixCardTray=
 }
 
 //get one card from the tray
@@ -121,7 +112,7 @@ void offerCards(void) {
 		cardhold[i][0] = pullCard();
 		cardhold[i][1] = pullCard();
 		
-		printf("dealer:?\n player[i]:%d\n",pullCard);
+		printf("dealer:x\n player[i]:%d\n",pullCard);
 	}
 	//2. give two card for the operator
 	cardhold[n_user][0] = pullCard();
@@ -255,10 +246,10 @@ int main(int argc, char *argv[]) {
 		if
 		
 		
-		);
+		);임
 	} while (gameEnd == 0);
 	
-	checkWinner();
+	checkWinner();//함수니까 이렇게 쓰기만 해도 실행된다고 황연수가 말했음 그러니까 맞을거
 	
 	
 	return 0;

@@ -30,9 +30,8 @@ int main(int argc, char *argv[]) {
 	}
 
 	
-	
 	N_CARDSET=N_CARD;
 	CardTray=N_CARDSET;
  
-	return 0;
+	return CardTray;
 }
