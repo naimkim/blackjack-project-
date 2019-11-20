@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 //카드를 섞어서 트레이에 넣음 그럼 트레이는 메모리공간인가? 
@@ -32,6 +33,8 @@ int main(int argc, char *argv[]) {
 	
 	N_CARDSET=N_CARD;
 	CardTray=N_CARDSET;
+	
+	printf("%d",N_CARD);
  
-	return CardTray;
+	return 0;
 }
