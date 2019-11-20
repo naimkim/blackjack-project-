@@ -10,14 +10,11 @@ int main(int argc, char *argv[]) {
 	int cardhold;
 	int n_user;
 	int x;
-	
-	
-	
-	
+
 	//1. give one card for each players and dealer
 	for (i=0;i<n_user;i++)
 	{
-		cardhold[i][0] = pullCard();//카드 트레이에서 하나씩 꺼내는 함슈  
+		cardhold[i][0] = pullCard();//카드 트레이에서 하나씩 꺼내는 함  수 
 		x=cardhold[0];
 		printf("->dealer's first card: %i\n ->player[i]'s first card: %d\n",x,pullCard);
 	}

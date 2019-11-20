@@ -1,6 +1,6 @@
 [Project]
-FileName=offerCards.dev
-Name=offerCards
+FileName=mixCardtray.dev
+Name=mixCardtray
 Type=1
 Ver=2
 ObjFiles=
@@ -51,7 +51,7 @@ AutoIncBuildNr=0
 SyncProduct=1
 
 [Unit1]
-FileName=offerCards.c
+FileName=mixCardtray.c
 CompileCpp=0
 Folder=
 Compile=1
