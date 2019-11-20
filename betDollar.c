@@ -7,6 +7,7 @@ int main(void) {
    int dollar;
    int i;
    int n_user=5;//또 막설정했으니까 다시 고치기. 
+   int N_MAX_BET=50;
    
    srand(time(NULL));
    
@@ -23,7 +24,7 @@ int main(void) {
        else if (dollar <= 50)
       {
       	for(i=1;i<n_user+1;i++)
-         printf("-> player[%d] bets $%d (out of $50)\n",i,rand()%50);
+         printf("-> player[%d] bets $%d (out of $50)\n",i,rand()%N_MAX_BET);
        
       }
 	  printf("----------------");
