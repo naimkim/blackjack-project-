@@ -15,6 +15,17 @@
 
 #define N_MIN_ENDCARD		30
 
+#include "mixCardtray.c"
+#include "betDollar.c"
+#include "offerCards.c"
+#include "printCardInitialStatus.c"
+#include "printUserCardStatus.c"
+#include "calcStepResult.c"
+#include "getAction.c"
+#include "checkResult.c"
+#include "checkWinner.c"
+ 
+
 
 //card tray object
 int CardTray[N_CARDSET*N_CARD];
@@ -165,13 +176,17 @@ int main(int argc, char *argv[]) {
 	
 	//set the number of players
 	configUser(
+	while(1){
+		
 	printf("HOW MANY PLAYERS WILL PLAY THIS GAME?(max is 5) : ");
 	scanf("%d",&n_user);
+		
+	if (n_user<=0||n_user>max_user)
+	printf("no\n");
 	
-	
-	if (n_user>max_user)
-	printf("TOO MANY PLAYERS!");
 	else
+	break;
+	}
 	printf("-->card is mixed and put into the tray");
 	);
 	//Game initialization --------
@@ -193,8 +208,12 @@ int main(int argc, char *argv[]) {
 		int player [n_user];
 		printf("\n------BETTING STEP--------");
 		
-		printf("\n-->input your betting dollar(total:$50) : ");
+		printf("\n-->input your betting dollar(total:$%d) : ",N_DOLLAR);
 		scanf("%d",&dollar);
+		if(dollar>50)
+		printf("you have only $50.")
+		else
+		printf("->your betting(total:$%d) : %d",N_DOLLAR,dollar);
 		for(player=1;player<n_user;player++);
 		printf("\n-->player[] bets $%d",);
 		);
@@ -206,7 +225,7 @@ int main(int argc, char *argv[]) {
 		printf("\n------------------ GAME start --------------------------\n");
 		
 		//each player's turn
-		for (;;) //each player
+		for (player=1;player<n_user+2;player++) //each player
 		{
 			printf("roundIndex is %d",roundIndex);
 			while () //do until the player dies or player says stop
