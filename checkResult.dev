@@ -1,6 +1,6 @@
 [Project]
-FileName=printCard.dev
-Name=printCard
+FileName=checkResult.dev
+Name=checkResult
 Type=1
 Ver=2
 ObjFiles=
@@ -51,7 +51,7 @@ AutoIncBuildNr=0
 SyncProduct=1
 
 [Unit1]
-FileName=printCard.c
+FileName=checkResult.c
 CompileCpp=0
 Folder=
 Compile=1
